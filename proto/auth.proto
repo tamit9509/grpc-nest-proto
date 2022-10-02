@@ -18,7 +18,7 @@ message RegisterRequest {
 
 message RegisterResponse {
   int32 status = 1;
-  oneof string error = 2;
+  optional string error = 2;
 }
 
 
@@ -30,8 +30,8 @@ message LoginRequest {
 
 message LoginResponse {
   int32 status = 1;
-  oneof string error = 2;
-  oneof string token = 3;
+  optional string error = 2;
+  optional string token = 3;
 }
 
 // Validate
@@ -41,6 +41,6 @@ message ValidateRequest {
 
 message ValidateResponse {
   int32 status = 1;
-  oneof string error = 2;
-  oneof int32 userId = 3;
+  optional string error = 2;
+  optional int32 userId = 3;
 }
